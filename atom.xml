@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="zecis.me/"/>
-  <updated>2016-02-22T15:01:20.000Z</updated>
+  <updated>2016-02-22T15:03:00.000Z</updated>
   <id>zecis.me/</id>
   
   <author>
@@ -20,9 +20,45 @@
     <link href="zecis.me/2016/02/22/App-preview-specifications/"/>
     <id>zecis.me/2016/02/22/App-preview-specifications/</id>
     <published>2016-02-22T14:59:51.000Z</published>
-    <updated>2016-02-22T15:01:20.000Z</updated>
+    <updated>2016-02-22T15:03:00.000Z</updated>
     
-    <content type="html">&lt;p&gt;##应用预览的分辨率&lt;br&gt;设备 | 本机分辨率 | 横屏分辨率 | 竖屏分辨率&lt;br&gt;:——–: | :——-: | :——-: | :——-:&lt;br&gt;5系 | 1136 x 640（16:9）| 1920 x 1080或1136 x 640 | 1080 x 1920或640 x 1136&lt;br&gt;iPad | 2048 x 1536（4:3） | 1200 x 900 | 900 x 1200&lt;br&gt;iPhone 6 | 1334 x 750 | 1334 x 750 | 750 x 1334&lt;br&gt;iPhone 6 Plus | 2208 x 1242（渲染像素） 1920 x 1080（物理像素） | 1920 x 1080 | 1080 X 1920&lt;/p&gt;
+    <content type="html">&lt;p&gt;##应用预览的分辨率&lt;/p&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th style=&quot;text-align:center&quot;&gt;设备&lt;/th&gt;
+&lt;th style=&quot;text-align:center&quot;&gt;本机分辨率&lt;/th&gt;
+&lt;th style=&quot;text-align:center&quot;&gt;横屏分辨率&lt;/th&gt;
+&lt;th style=&quot;text-align:center&quot;&gt;竖屏分辨率&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td style=&quot;text-align:center&quot;&gt;5系&lt;/td&gt;
+&lt;td style=&quot;text-align:center&quot;&gt;1136 x 640（16:9）&lt;/td&gt;
+&lt;td style=&quot;text-align:center&quot;&gt;1920 x 1080或1136 x 640&lt;/td&gt;
+&lt;td style=&quot;text-align:center&quot;&gt;1080 x 1920或640 x 1136&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&quot;text-align:center&quot;&gt;iPad&lt;/td&gt;
+&lt;td style=&quot;text-align:center&quot;&gt;2048 x 1536（4:3）&lt;/td&gt;
+&lt;td style=&quot;text-align:center&quot;&gt;1200 x 900&lt;/td&gt;
+&lt;td style=&quot;text-align:center&quot;&gt;900 x 1200&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&quot;text-align:center&quot;&gt;iPhone 6&lt;/td&gt;
+&lt;td style=&quot;text-align:center&quot;&gt;1334 x 750&lt;/td&gt;
+&lt;td style=&quot;text-align:center&quot;&gt;1334 x 750&lt;/td&gt;
+&lt;td style=&quot;text-align:center&quot;&gt;750 x 1334&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&quot;text-align:center&quot;&gt;iPhone 6 Plus&lt;/td&gt;
+&lt;td style=&quot;text-align:center&quot;&gt;2208 x 1242（渲染像素） 1920 x 1080（物理像素）&lt;/td&gt;
+&lt;td style=&quot;text-align:center&quot;&gt;1920 x 1080&lt;/td&gt;
+&lt;td style=&quot;text-align:center&quot;&gt;1080 X 1920&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
 &lt;p&gt;&lt;em&gt;iPhone 4s及更早的4英寸设备无应用预览功能&lt;/em&gt;&lt;/p&gt;
 &lt;h1 id=&quot;App预览的特性&quot;&gt;&lt;a href=&quot;#App预览的特性&quot; class=&quot;headerlink&quot; title=&quot;##App预览的特性&quot;&gt;&lt;/a&gt;##App预览的特性&lt;/h1&gt;&lt;table&gt;
 &lt;thead&gt;
@@ -81,13 +117,19 @@
 &lt;/tbody&gt;
 &lt;/table&gt;
 &lt;blockquote&gt;
-&lt;p&gt;参考文献：&lt;a href=&quot;https://developer.apple.com/library/ios/documentation/LanguagesUtilities/Conceptual/iTunesConnect_Guide/Appendices/Properties.html#//apple_ref/doc/uid/TP40011225-CH26-SW1&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;https://developer.apple.com/library/ios/documentation/LanguagesUtilities/Conceptual/iTunesConnect_Guide/Appendices/Properties.html#//apple_ref/doc/uid/TP40011225-CH26-SW1&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;参考资料：&lt;a href=&quot;https://developer.apple.com/library/ios/documentation/LanguagesUtilities/Conceptual/iTunesConnect_Guide/Appendices/Properties.html#//apple_ref/doc/uid/TP40011225-CH26-SW1&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;https://developer.apple.com/library/ios/documentation/LanguagesUtilities/Conceptual/iTunesConnect_Guide/Appendices/Properties.html#//apple_ref/doc/uid/TP40011225-CH26-SW1&lt;/a&gt;&lt;/p&gt;
 &lt;/blockquote&gt;
 </content>
     
     <summary type="html">
     
-      &lt;p&gt;##应用预览的分辨率&lt;br&gt;设备 | 本机分辨率 | 横屏分辨率 | 竖屏分辨率&lt;br&gt;:——–: | :——-: | :——-: | :——-:&lt;br&gt;5系 | 1136 x 640（16:9）| 1920 x 1080或1136 x 640 | 1080 x 1920或
+      &lt;p&gt;##应用预览的分辨率&lt;/p&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th style=&quot;text-align:center&quot;&gt;设备&lt;/th&gt;
+&lt;th style=&quot;text-align:center&quot;&gt;本机分辨率&lt;/th&gt;
+&lt;th style=&quot;text-align:
     
     </summary>
     
