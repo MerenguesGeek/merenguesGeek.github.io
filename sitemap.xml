@@ -2,6 +2,13 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>zecis.me/2016/02/22/App-preview-specifications/</loc>
+    
+    <lastmod>2016-02-22T15:01:20.000Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>zecis.me/categories/index.html</loc>
     
     <lastmod>2016-02-22T14:57:29.000Z</lastmod>
@@ -19,13 +26,6 @@
     <loc>zecis.me/about/index.html</loc>
     
     <lastmod>2016-02-22T14:57:02.000Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>zecis.me/2016/02/22/hello-world/</loc>
-    
-    <lastmod>2016-02-22T14:16:44.000Z</lastmod>
     
   </url>
   
