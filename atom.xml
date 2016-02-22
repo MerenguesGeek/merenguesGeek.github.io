@@ -65,10 +65,10 @@
   
   <entry>
     <title>App内跳转系统设置界面</title>
-    <link href="zecis.me/2016/02/22/jump-to-preferences/"/>
-    <id>zecis.me/2016/02/22/jump-to-preferences/</id>
-    <published>2016-02-22T15:15:40.000Z</published>
-    <updated>2016-02-22T15:16:08.000Z</updated>
+    <link href="zecis.me/2015/12/08/jump-to-preferences/"/>
+    <id>zecis.me/2015/12/08/jump-to-preferences/</id>
+    <published>2015-12-08T12:35:40.000Z</published>
+    <updated>2016-02-22T15:20:36.000Z</updated>
     
     <content type="html">&lt;p&gt;跳转到app的系统设置界面&lt;/p&gt;
 &lt;figure class=&quot;highlight objc&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;prefs:root=&lt;span class=&quot;string&quot;&gt;&quot;Bundle identifier&quot;&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;</content>
