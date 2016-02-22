@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="zecis.me/"/>
-  <updated>2016-02-22T15:16:08.000Z</updated>
+  <updated>2016-02-22T15:17:09.000Z</updated>
   <id>zecis.me/</id>
   
   <author>
@@ -14,6 +14,56 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Mac下的神器</title>
+    <link href="zecis.me/2016/02/22/mac-apps/"/>
+    <id>zecis.me/2016/02/22/mac-apps/</id>
+    <published>2016-02-22T15:16:51.000Z</published>
+    <updated>2016-02-22T15:17:09.000Z</updated>
+    
+    <content type="html">&lt;h4 id=&quot;开发篇&quot;&gt;&lt;a href=&quot;#开发篇&quot; class=&quot;headerlink&quot; title=&quot;开发篇&quot;&gt;&lt;/a&gt;开发篇&lt;/h4&gt;&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Alfred&lt;/strong&gt;：说它是 Mac 下第一神器估计没什么人反对吧，我觉得任何解释对于它都是多余的，谁用谁知道。（£ 17 / License）&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Dash&lt;/strong&gt;：程序员查文档什么的最烦了，Dash正是一个把您从烦恼中解救出来的神器，没有您想不到的语言，只有您不会用的语言。（$ 19.99 / License）&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Kaleidoscope&lt;/strong&gt;：代码比对合并软件，个人认为是 Mac 上 UI 最漂亮的代码比对合并软件。（Mac App Store：￥ 448）&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Spark Inspector&lt;/strong&gt;：UI 调试软件，可以将 app 的所有图层用 2D / 3D 的样式显示出来，方便调试 UI。（$ 49.99 / License）&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Mou&lt;/strong&gt;：Mac 下的 markdown 编辑工具，支持实时浏览，可将文档导出为 HTML 和 PDF 格式。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;GitHub&lt;/strong&gt;：全球最大同性社交平台 / 全球最大的代码托管平台，只需要这两个头衔就够了。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Charles&lt;/strong&gt;：网络调试工具，可以利用 Mac 共享 WiFi 网络给 iPhone / iPad，再通过 Charles 抓取 iPhone / iPad 的网络数据。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Jason&lt;/strong&gt;：强大的 JSON 数据解析器，自动分析数据的类型，方便开发者进行网络数据解析。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;a id=&quot;more&quot;&gt;&lt;/a&gt;
+&lt;h4 id=&quot;生产力篇&quot;&gt;&lt;a href=&quot;#生产力篇&quot; class=&quot;headerlink&quot; title=&quot;生产力篇&quot;&gt;&lt;/a&gt;生产力篇&lt;/h4&gt;&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;1Password&lt;/strong&gt;：密码保护软件，可以多平台同步，如果您是苹果设备的忠实粉丝，那么iPhone和Mac设备件无缝的密码同步简直不能太爽。（Mac App Store：￥ 328）&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Evernote&lt;/strong&gt;：全平台共享文档和笔记，安装浏览器插件后可通过截屏等方式保存网页，目前最好的网络笔记本。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Caffeine&lt;/strong&gt;：控制 Mac 休眠的小软件，一键设置，可以免除许多不必要的操作。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Reeder&lt;/strong&gt;：虽然 Google Reader 关闭后大家一致认为 RSS 订阅已死，但是订阅一些精品的技术和行业博客依然是我最热衷的获取资讯的方式。Reeder 满足我对 RSS 订阅器的所有要求。（Mac App Store：￥ 68）&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;奇妙清单&lt;/strong&gt;：拖延症患者必备。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Sketch&lt;/strong&gt;：移动 UI 设计师必备，尤其是一键导出 @2x、@3x 后缀的图片，太有爱了。（Mac App Store：￥ 648）&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;MindNode Pro&lt;/strong&gt;：思维导图工具，相对功能较简单，但已能满足我的日常需要。（Mac App Store：￥ 128）&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;HyperDock&lt;/strong&gt;：虽然 Mac 有了多桌面，但是界面之间的切换还是不方便，有了 HyperDock 配合多桌面就方便多了。（Mac App Store：￥ 68）&lt;/li&gt;
+&lt;/ul&gt;
+</content>
+    
+    <summary type="html">
+    
+      &lt;h4 id=&quot;开发篇&quot;&gt;&lt;a href=&quot;#开发篇&quot; class=&quot;headerlink&quot; title=&quot;开发篇&quot;&gt;&lt;/a&gt;开发篇&lt;/h4&gt;&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Alfred&lt;/strong&gt;：说它是 Mac 下第一神器估计没什么人反对吧，我觉得任何解释对于它都是多余的，谁用谁知道。（£ 17 / License）&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Dash&lt;/strong&gt;：程序员查文档什么的最烦了，Dash正是一个把您从烦恼中解救出来的神器，没有您想不到的语言，只有您不会用的语言。（$ 19.99 / License）&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Kaleidoscope&lt;/strong&gt;：代码比对合并软件，个人认为是 Mac 上 UI 最漂亮的代码比对合并软件。（Mac App Store：￥ 448）&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Spark Inspector&lt;/strong&gt;：UI 调试软件，可以将 app 的所有图层用 2D / 3D 的样式显示出来，方便调试 UI。（$ 49.99 / License）&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Mou&lt;/strong&gt;：Mac 下的 markdown 编辑工具，支持实时浏览，可将文档导出为 HTML 和 PDF 格式。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;GitHub&lt;/strong&gt;：全球最大同性社交平台 / 全球最大的代码托管平台，只需要这两个头衔就够了。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Charles&lt;/strong&gt;：网络调试工具，可以利用 Mac 共享 WiFi 网络给 iPhone / iPad，再通过 Charles 抓取 iPhone / iPad 的网络数据。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Jason&lt;/strong&gt;：强大的 JSON 数据解析器，自动分析数据的类型，方便开发者进行网络数据解析。&lt;/li&gt;
+&lt;/ul&gt;
+    
+    </summary>
+    
+    
+      <category term="Mac" scheme="zecis.me/tags/Mac/"/>
+    
+  </entry>
   
   <entry>
     <title>App内跳转系统设置界面</title>
