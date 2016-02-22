@@ -1,0 +1,471 @@
+
+ <!DOCTYPE HTML>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  
+    <title>EventKit简介 | Zec&#39;s Notes</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1,user-scalable=no">
+    
+    <meta name="author" content="Zec">
+    
+
+    
+    <meta name="description" content="最近在公司的项目开发过程中遇到一个需求：获取系统日历内的事件，通过 ANCS 协议通知可穿戴设备，所以就找了官方的Demo看了一下。&amp;lt;!-- 在 iOS 4.0 就提供了`EventKit.framework`给开发者获取日历相关数据。--&amp;gt;
+首先，日历中所以的事件都是通过EKEventStore这个类来管理的，所有单独的事件都是一个个EKEvent对象，结合下面的数据和日历事件详情截图可获取对">
+<meta property="og:type" content="article">
+<meta property="og:title" content="EventKit简介">
+<meta property="og:url" content="zecis.me/2016/02/22/eventkit/index.html">
+<meta property="og:site_name" content="Zec's Notes">
+<meta property="og:description" content="最近在公司的项目开发过程中遇到一个需求：获取系统日历内的事件，通过 ANCS 协议通知可穿戴设备，所以就找了官方的Demo看了一下。&amp;lt;!-- 在 iOS 4.0 就提供了`EventKit.framework`给开发者获取日历相关数据。--&amp;gt;
+首先，日历中所以的事件都是通过EKEventStore这个类来管理的，所有单独的事件都是一个个EKEvent对象，结合下面的数据和日历事件详情截图可获取对">
+<meta property="og:image" content="https://raw.githubusercontent.com/MerenguesGeek/MarkdownPic/master/EventKit/IMG_8432.PNG">
+<meta property="og:updated_time" content="2016-02-22T15:18:05.000Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="EventKit简介">
+<meta name="twitter:description" content="最近在公司的项目开发过程中遇到一个需求：获取系统日历内的事件，通过 ANCS 协议通知可穿戴设备，所以就找了官方的Demo看了一下。&amp;lt;!-- 在 iOS 4.0 就提供了`EventKit.framework`给开发者获取日历相关数据。--&amp;gt;
+首先，日历中所以的事件都是通过EKEventStore这个类来管理的，所有单独的事件都是一个个EKEvent对象，结合下面的数据和日历事件详情截图可获取对">
+<meta name="twitter:creator" content="@MeRengeUS_Z">
+
+    
+    <link rel="alternative" href="/atom.xml" title="Zec&#39;s Notes" type="application/atom+xml">
+    
+    
+    <link rel="icon" href="/img/favicon.ico">
+    
+    
+    <link rel="apple-touch-icon" href="/img/jacman.jpg">
+    <link rel="apple-touch-icon-precomposed" href="/img/jacman.jpg">
+    
+    <link rel="stylesheet" href="/css/style.css" type="text/css">
+</head>
+
+  <body>
+    <header>
+      
+<div>
+		
+			<div id="imglogo">
+				<a href="/"><img src="/img/logo.png" alt="Zec&#39;s Notes" title="Zec&#39;s Notes"/></a>
+			</div>
+			
+			<div id="textlogo">
+				<h1 class="site-name"><a href="/" title="Zec&#39;s Notes">Zec&#39;s Notes</a></h1>
+				<h2 class="blog-motto"></h2>
+			</div>
+			<div class="navbar"><a class="navbutton navmobile" href="#" title="菜单">
+			</a></div>
+			<nav class="animated">
+				<ul>
+					<ul>
+					 
+						<li><a href="/">Home</a></li>
+					
+						<li><a href="/archives">Archives</a></li>
+					
+						<li><a href="/about">About</a></li>
+					
+						<li><a href="/categories">Categories</a></li>
+					
+					<li>
+ 					
+					<form class="search" action="//google.com/search" method="get" accept-charset="utf-8">
+						<label>Search</label>
+						<input type="search" id="search" name="q" autocomplete="off" maxlength="20" placeholder="搜索" />
+						<input type="hidden" name="q" value="site:zecis.me">
+					</form>
+					
+					</li>
+				</ul>
+			</nav>			
+</div>
+    </header>
+    <div id="container">
+      <div id="main" class="post" itemscope itemprop="blogPost">
+  
+	<article itemprop="articleBody"> 
+		<header class="article-info clearfix">
+  <h1 itemprop="name">
+    
+      <a href="/2016/02/22/eventkit/" title="EventKit简介" itemprop="url">EventKit简介</a>
+  </h1>
+  <p class="article-author">By
+       
+		<a href="/about" title="Zec" target="_blank" itemprop="author">Zec</a>
+		
+  <p class="article-time">
+    <time datetime="2016-02-22T15:17:51.000Z" itemprop="datePublished"> 发表于 2016-02-22</time>
+    
+  </p>
+</header>
+	<div class="article-content">
+		
+		<div id="toc" class="toc-article">
+			<strong class="toc-title">文章目录</strong>
+		
+			
+		
+		</div>
+		
+		<p>最近在公司的项目开发过程中遇到一个需求：获取系统日历内的事件，通过 ANCS 协议通知可穿戴设备，所以就找了官方的Demo看了一下。<br><!-- 在 iOS 4.0 就提供了`EventKit.framework`给开发者获取日历相关数据。--></p>
+<p>首先，日历中所以的事件都是通过<code>EKEventStore</code>这个类来管理的，所有单独的事件都是一个个<code>EKEvent</code>对象，结合下面的数据和日历事件详情截图可获取对应的数据</p>
+<a id="more"></a>
+<figure class="highlight objc"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br></pre></td><td class="code"><pre><span class="line">	 EKEvent &lt;<span class="number">0x125d53960</span>&gt;</span><br><span class="line">&#123;	 title = 		EventKit介绍; </span><br><span class="line">	 location = 	深圳宝安国际机场</span><br><span class="line">机场南路; </span><br><span class="line">	 calendar = 	EKCalendar &lt;<span class="number">0x125f99cc0</span>&gt; &#123;title = 家庭; type = CalDAV; allowsModify = <span class="literal">YES</span>; color = <span class="preprocessor">#FFCC00;&#125;; </span></span><br><span class="line">	 alarms = 		(</span><br><span class="line">    <span class="string">"EKAlarm &lt;0x1270fa720&gt; &#123;triggerInterval = -54000.000000&#125;"</span>,</span><br><span class="line">    <span class="string">"EKAlarm &lt;0x1270b5f10&gt; &#123;triggerInterval = -140400.000000&#125;"</span></span><br><span class="line">); </span><br><span class="line">	 URL = 			www<span class="variable">.google</span><span class="variable">.com</span>; </span><br><span class="line">	 lastModified = <span class="number">2016</span>-<span class="number">01</span>-<span class="number">14</span> <span class="number">10</span>:<span class="number">58</span>:<span class="number">18</span> +<span class="number">0000</span>; </span><br><span class="line">	 startTimeZone = 	(null); </span><br><span class="line">	 startTimeZone = 	(null) </span><br><span class="line">&#125;; </span><br><span class="line">	 location = 	深圳宝安国际机场</span><br><span class="line">机场南路; </span><br><span class="line">	 structuredLocation = 	EKStructuredLocation &lt;<span class="number">0x1270b3f30</span>&gt; &#123;title = 深圳宝安国际机场; address = 机场南路; geo = &lt;+<span class="number">22.62538000</span>,+<span class="number">113.81286600</span>&gt; +/- <span class="number">0.00</span>m (speed -<span class="number">1.00</span> mps / course -<span class="number">1.00</span>) @ <span class="number">16</span>/<span class="number">1</span>/<span class="number">14</span> 中国标准时间 <span class="number">19</span>:<span class="number">01</span>:<span class="number">31</span>; abID = (null); routing = (null); radius = <span class="number">14194.038856</span>;&#125;; </span><br><span class="line">	 startDate = 	<span class="number">2016</span>-<span class="number">01</span>-<span class="number">13</span> <span class="number">16</span>:<span class="number">00</span>:<span class="number">00</span> +<span class="number">0000</span>; </span><br><span class="line">	 endDate = 		<span class="number">2016</span>-<span class="number">01</span>-<span class="number">16</span> <span class="number">15</span>:<span class="number">59</span>:<span class="number">59</span> +<span class="number">0000</span>; </span><br><span class="line">	 allDay = 		<span class="number">1</span>; </span><br><span class="line">	 floating = 	<span class="number">1</span>; </span><br><span class="line">	 recurrence = 	EKRecurrenceRule &lt;<span class="number">0x125da27f0</span>&gt; RRULE FREQ=DAILY;INTERVAL=<span class="number">1</span>;UNTIL=<span class="number">20160315</span>T235959Z; </span><br><span class="line">	 attendees = 	(</span><br><span class="line">    <span class="string">"EKAttendee &lt;0x1270cf2b0&gt; &#123;UUID = 28FB4329-77A5-4206-B7CA-30AC42AC25EC; name = 李四; email = lisi@gmail.com; status = 0; role = 0; type = 1&#125;"</span>,</span><br><span class="line">    <span class="string">"EKAttendee &lt;0x1270cf300&gt; &#123;UUID = DBFE4217-DEDC-4527-BC73-09938F3789BD; name = 张三; email = zhangsan@gmail.com; status = 2; role = 0; type = 1&#125;"</span></span><br><span class="line">); </span><br><span class="line">	 travelTime = 	(null); </span><br><span class="line">	 startLocation = 	(null);</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
+<p><img src="https://raw.githubusercontent.com/MerenguesGeek/MarkdownPic/master/EventKit/IMG_8432.PNG" alt=""></p>
+<p><code>EventKit.framework</code>相对是比较简单的，但还是有几点需要弄清楚：</p>
+<ul>
+<li>事件中带的提醒功能是<code>EKAlarm</code>对象，提醒中设置的提前提醒时间是根据<code>relativeOffset</code>这个属性来获取，这是一个<code>NSTimeInterval</code>数据，数值表示距离该事件起始时间有多少秒。相关详情可查阅<a href="https://developer.apple.com/library/prerelease/ios/documentation/EventKit/Reference/EKAlarmClassRef/" target="_blank" rel="external"><em>EKAlarm Class Reference</em></a>。</li>
+<li>事件中的定位信息的类是<code>EKStructuredLocation</code>，相关详情可查阅<a href="https://developer.apple.com/library/ios/documentation/EventKit/Reference/EKStructuredLocationClassRef/index.html#//apple_ref/doc/uid/TP40011853" target="_blank" rel="external"><em>EKStructuredLocation Class Reference</em></a>。</li>
+<li>循环规则的类是<code>EKRecurrenceRule</code>,需要注意的是在<code>RRULE FREQ=DAILY;INTERVAL=1;UNTIL=20160315T235959Z;</code>中<code>RRULE FREQ=DAILY</code>表示是每天循环,也有<code>WEEK</code>等可供选择，<code>INTERVAL=1</code>表示是循环间隔是1天，如果2则表示隔一天循环一次。<code>UNTIL=20160315T235959Z</code>表示循环结束时间是<strong>2016年03月15日 23:59:59</strong>。相关类详情可查阅<a href="https://developer.apple.com/library/ios/documentation/EventKit/Reference/EKRecurrenceRuleClassRef/index.html#//apple_ref/doc/uid/TP40009569" target="_blank" rel="external"><em>EKRecurrenceRule Class Reference</em></a>。</li>
+<li>被邀请人的类是<code>EKParticipant</code>，里面有姓名，E-mail等数据，相关详情可查阅<a href="https://developer.apple.com/library/prerelease/ios/documentation/EventKit/Reference/EKParticipantClassRef/" target="_blank" rel="external"><em>EKParticipant Class Reference</em></a>。</li>
+</ul>
+<p>下面直接上代码：</p>
+<ol>
+<li>检查日历授权</li>
+</ol>
+<figure class="highlight objc"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br></pre></td><td class="code"><pre><span class="line"><span class="preprocessor">#pragma mark - 检查日历授权</span></span><br><span class="line">- (<span class="keyword">void</span>)checkEventStoreAccessForCalendar &#123;</span><br><span class="line">    EKAuthorizationStatus status = [EKEventStore authorizationStatusForEntityType:EKEntityTypeEvent];</span><br><span class="line">    </span><br><span class="line">    <span class="keyword">switch</span> (status)</span><br><span class="line">    &#123;</span><br><span class="line">            <span class="comment">// Update our UI if the user has granted access to their Calendar</span></span><br><span class="line">        <span class="keyword">case</span> EKAuthorizationStatusAuthorized: [<span class="keyword">self</span> fetchEvents];</span><br><span class="line">            <span class="keyword">break</span>;</span><br><span class="line">            <span class="comment">// Prompt the user for access to Calendar if there is no definitive answer</span></span><br><span class="line">        <span class="keyword">case</span> EKAuthorizationStatusNotDetermined: [<span class="keyword">self</span> requestCalendarAccess];</span><br><span class="line">            <span class="keyword">break</span>;</span><br><span class="line">            <span class="comment">// Display a message if the user has denied or restricted access to Calendar</span></span><br><span class="line">        <span class="keyword">case</span> EKAuthorizationStatusDenied:</span><br><span class="line">        <span class="keyword">case</span> EKAuthorizationStatusRestricted:</span><br><span class="line">        &#123;</span><br><span class="line">            </span><br><span class="line">            <span class="built_in">UIAlertView</span> *alertView = [[<span class="built_in">UIAlertView</span> alloc] initWithTitle:kLStr(<span class="string">@"Matters Reminder"</span>)</span><br><span class="line">                                                                message:kLStr(<span class="string">@"RemindersAlertMsg"</span>)</span><br><span class="line">                                                               delegate:<span class="keyword">self</span></span><br><span class="line">                                                      cancelButtonTitle:kLStr(<span class="string">@"Alert Cancel"</span>)</span><br><span class="line">                                                      otherButtonTitles:kLStr(<span class="string">@"Alert Setting"</span>), <span class="literal">nil</span>];</span><br><span class="line">            [alertView show];</span><br><span class="line">            &#125;</span><br><span class="line">            <span class="keyword">break</span>;</span><br><span class="line">        <span class="keyword">default</span>:</span><br><span class="line">            <span class="keyword">break</span>;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<ol>
+<li>授权App</li>
+</ol>
+<figure class="highlight objc"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="preprocessor">#pragma mark - 授权app访问日历数据</span></span><br><span class="line">-(<span class="keyword">void</span>)requestCalendarAccess</span><br><span class="line">&#123;</span><br><span class="line">    [<span class="keyword">self</span><span class="variable">.eventStore</span> requestAccessToEntityType:EKEntityTypeEvent completion:^(<span class="built_in">BOOL</span> granted, <span class="built_in">NSError</span> *error)</span><br><span class="line">     &#123;</span><br><span class="line">         <span class="keyword">if</span> (granted)</span><br><span class="line">         &#123;</span><br><span class="line">             __<span class="keyword">weak</span> <span class="keyword">typeof</span>(<span class="keyword">self</span>)weakSelf = <span class="keyword">self</span>;        </span><br><span class="line">             <span class="built_in">dispatch_async</span>(dispatch_get_main_queue(), ^&#123;</span><br><span class="line">                 [weakSelf fetchEvents];</span><br><span class="line">             &#125;);</span><br><span class="line">         &#125;</span><br><span class="line">     &#125;];</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<ol>
+<li>获取日期范围内的日历数据</li>
+</ol>
+<figure class="highlight objc"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line">- (<span class="built_in">NSMutableArray</span> *)fetchEvents</span><br><span class="line">&#123;</span><br><span class="line">    <span class="built_in">NSDate</span> *startDate = [<span class="built_in">NSDate</span> date];</span><br><span class="line">    <span class="built_in">NSDate</span> *endDate = [<span class="built_in">NSDate</span> date];</span><br><span class="line">    <span class="built_in">NSDateComponents</span> *tomorrowDateComponents = [[<span class="built_in">NSDateComponents</span> alloc] init];</span><br><span class="line">    <span class="comment">//往后365天数据</span></span><br><span class="line">    tomorrowDateComponents<span class="variable">.day</span> = <span class="number">365</span>;</span><br><span class="line">    endDate = [[<span class="built_in">NSCalendar</span> currentCalendar] dateByAddingComponents:tomorrowDateComponents</span><br><span class="line">                                                              toDate:endDate</span><br><span class="line">                                                             options:<span class="built_in">NSCalendarSearchBackwards</span>];</span><br><span class="line">    <span class="built_in">NSPredicate</span> *predicate = [<span class="keyword">self</span><span class="variable">.eventStore</span> predicateForEventsWithStartDate:startDate</span><br><span class="line">                                                                      endDate:endDate</span><br><span class="line">                                                                    calendars:<span class="literal">nil</span>];</span><br><span class="line">	<span class="built_in">NSMutableArray</span> *events = [<span class="built_in">NSMutableArray</span> arrayWithArray:[<span class="keyword">self</span><span class="variable">.eventStore</span> eventsMatchingPredicate:predicate]];</span><br><span class="line">    <span class="keyword">return</span> events;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<ol>
+<li>跳转原生日历界面</li>
+</ol>
+<figure class="highlight objc"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">- (<span class="keyword">void</span>)jumpIntoEvent&#123;</span><br><span class="line">    EKEventViewController* eventViewController = [[EKEventViewController alloc] init];</span><br><span class="line">    <span class="comment">//此处应传入一个EKEvent对象</span></span><br><span class="line">    eventViewController<span class="variable">.event</span> = <span class="keyword">self</span><span class="variable">.dataSource</span>[<span class="number">0</span>];</span><br><span class="line">    <span class="comment">// Allow event editing</span></span><br><span class="line">    eventViewController<span class="variable">.allowsEditing</span> = <span class="literal">YES</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+  
+	</div>
+		<footer class="article-footer clearfix">
+<div class="article-catetags">
+
+
+</div>
+
+
+
+	<div class="article-share" id="share">
+	
+	  <div data-url="zecis.me/2016/02/22/eventkit/" data-title="EventKit简介 | Zec&#39;s Notes" data-tsina="null" class="share clearfix">
+	  </div>
+	
+	</div>
+
+
+</footer>
+
+   	       
+	</article>
+	
+<nav class="article-nav clearfix">
+ 
+
+<div class="next">
+<a href="/2016/02/22/mac-apps/"  title="Mac下的神器">
+ <strong>下一篇：</strong><br/> 
+ <span>Mac下的神器
+</span>
+</a>
+</div>
+
+</nav>
+
+	
+
+</div>  
+      <div class="openaside"><a class="navbutton" href="#" title="显示侧边栏"></a></div>
+
+  <div id="toc" class="toc-aside">
+  <strong class="toc-title">文章目录</strong>
+ 
+ 
+ 
+  </div>
+
+<div id="asidepart">
+<div class="closeaside"><a class="closebutton" href="#" title="隐藏侧边栏"></a></div>
+<aside class="clearfix">
+
+  
+<div class="github-card">
+<p class="asidetitle">Github 名片</p>
+<div class="github-card" data-github="MerenguesGeek" data-width="220" data-height="119" data-theme="medium">
+<script type="text/javascript" src="//cdn.jsdelivr.net/github-cards/latest/widget.js" ></script>
+</div>
+  </div>
+
+
+
+  
+
+  
+<div class="tagslist">
+	<p class="asidetitle">标签</p>
+		<ul class="clearfix">
+		
+			
+				<li><a href="/tags/Mac/" title="Mac">Mac<sup>1</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/iOS/" title="iOS">iOS<sup>1</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/iTuneConnect/" title="iTuneConnect">iTuneConnect<sup>1</sup></a></li>
+			
+		
+		</ul>
+</div>
+
+
+  <div class="rsspart">
+	<a href="/atom.xml" target="_blank" title="rss">RSS 订阅</a>
+</div>
+
+</aside>
+</div>
+    </div>
+    <footer><div id="footer" >
+	
+	<div class="line">
+		<span></span>
+		<div class="author"></div>
+	</div>
+	
+	
+	<section class="info">
+		<p> Talk is cheap <br/>
+			Show me the code</p>
+	</section>
+	 
+	<div class="social-font" class="clearfix">
+		
+		
+		<a href="https://github.com/MerenguesGeek" target="_blank" class="icon-github" title="github"></a>
+		
+		
+		
+		<a href="https://twitter.com/MeRengeUS_Z" target="_blank" class="icon-twitter" title="twitter"></a>
+		
+		
+		
+		
+		
+		
+		
+		<a href="mailto:zky013152yi@gmail.com" target="_blank" class="icon-email" title="Email Me"></a>
+		
+	</div>
+			
+		
+
+		<p class="copyright">
+		Powered by <a href="http://hexo.io" target="_blank" title="hexo">hexo</a> and Theme by <a href="https://github.com/wuchong/jacman" target="_blank" title="Jacman">Jacman</a> © 2016 
+		
+		<a href="/about" target="_blank" title="Zec">Zec</a>
+		
+		
+		</p>
+</div>
+</footer>
+    <script src="/js/jquery-2.0.3.min.js"></script>
+<script src="/js/jquery.imagesloaded.min.js"></script>
+<script src="/js/gallery.js"></script>
+<script src="/js/jquery.qrcode-0.12.0.min.js"></script>
+
+<script type="text/javascript">
+$(document).ready(function(){ 
+  $('.navbar').click(function(){
+    $('header nav').toggleClass('shownav');
+  });
+  var myWidth = 0;
+  function getSize(){
+    if( typeof( window.innerWidth ) == 'number' ) {
+      myWidth = window.innerWidth;
+    } else if( document.documentElement && document.documentElement.clientWidth) {
+      myWidth = document.documentElement.clientWidth;
+    };
+  };
+  var m = $('#main'),
+      a = $('#asidepart'),
+      c = $('.closeaside'),
+      o = $('.openaside');
+  c.click(function(){
+    a.addClass('fadeOut').css('display', 'none');
+    o.css('display', 'block').addClass('fadeIn');
+    m.addClass('moveMain');
+  });
+  o.click(function(){
+    o.css('display', 'none').removeClass('beforeFadeIn');
+    a.css('display', 'block').removeClass('fadeOut').addClass('fadeIn');      
+    m.removeClass('moveMain');
+  });
+  $(window).scroll(function(){
+    o.css("top",Math.max(80,260-$(this).scrollTop()));
+  });
+  
+  $(window).resize(function(){
+    getSize(); 
+    if (myWidth >= 1024) {
+      $('header nav').removeClass('shownav');
+    }else{
+      m.removeClass('moveMain');
+      a.css('display', 'block').removeClass('fadeOut');
+      o.css('display', 'none');
+      
+      $('#toc.toc-aside').css('display', 'none');
+        
+    }
+  });
+});
+</script>
+
+<script type="text/javascript">
+$(document).ready(function(){ 
+  var ai = $('.article-content>iframe'),
+      ae = $('.article-content>embed'),
+      t  = $('#toc'),
+      ta = $('#toc.toc-aside'),
+      o  = $('.openaside'),
+      c  = $('.closeaside');
+  if(ai.length>0){
+    ai.wrap('<div class="video-container" />');
+  };
+  if(ae.length>0){
+   ae.wrap('<div class="video-container" />');
+  };
+  c.click(function(){
+    ta.css('display', 'block').addClass('fadeIn');
+  });
+  o.click(function(){
+    ta.css('display', 'none');
+  });
+  $(window).scroll(function(){
+    ta.css("top",Math.max(140,320-$(this).scrollTop()));
+  });
+});
+</script>
+
+
+<script type="text/javascript">
+$(document).ready(function(){ 
+  var $this = $('.share'),
+      url = $this.attr('data-url'),
+      encodedUrl = encodeURIComponent(url),
+      title = $this.attr('data-title'),
+      tsina = $this.attr('data-tsina'),
+      description = $this.attr('description');
+  var html = [
+  '<div class="hoverqrcode clearfix"></div>',
+  '<a class="overlay" id="qrcode"></a>',
+  '<a href="https://www.facebook.com/sharer.php?u=' + encodedUrl + '" class="article-share-facebook" target="_blank" title="Facebook"></a>',
+  '<a href="https://twitter.com/intent/tweet?url=' + encodedUrl + '" class="article-share-twitter" target="_blank" title="Twitter"></a>',
+  '<a href="#qrcode" class="article-share-qrcode" title="微信"></a>',
+  '<a href="http://widget.renren.com/dialog/share?resourceUrl=' + encodedUrl + '&srcUrl=' + encodedUrl + '&title=' + title +'" class="article-share-renren" target="_blank" title="人人"></a>',
+  '<a href="http://service.weibo.com/share/share.php?title='+title+'&url='+encodedUrl +'&ralateUid='+ tsina +'&searchPic=true&style=number' +'" class="article-share-weibo" target="_blank" title="微博"></a>',
+  '<span title="Share to"></span>'
+  ].join('');
+  $this.append(html);
+
+  $('.hoverqrcode').hide();
+
+  var myWidth = 0;
+  function updatehoverqrcode(){
+    if( typeof( window.innerWidth ) == 'number' ) {
+      myWidth = window.innerWidth;
+    } else if( document.documentElement && document.documentElement.clientWidth) {
+      myWidth = document.documentElement.clientWidth;
+    };
+    var qrsize = myWidth > 1024 ? 200:100;
+    var options = {render: 'image', size: qrsize, fill: '#2ca6cb', text: url, radius: 0.5, quiet: 1};
+    var p = $('.article-share-qrcode').position();
+    $('.hoverqrcode').empty().css('width', qrsize).css('height', qrsize)
+                          .css('left', p.left-qrsize/2+20).css('top', p.top-qrsize-10)
+                          .qrcode(options);
+  };
+  $(window).resize(function(){
+    $('.hoverqrcode').hide();
+  });
+  $('.article-share-qrcode').click(function(){
+    updatehoverqrcode();
+    $('.hoverqrcode').toggle();
+  });
+  $('.article-share-qrcode').hover(function(){}, function(){
+      $('.hoverqrcode').hide();
+  });
+});   
+</script>
+
+
+
+
+
+
+
+
+
+<link rel="stylesheet" href="/fancybox/jquery.fancybox.css" media="screen" type="text/css">
+<script src="/fancybox/jquery.fancybox.pack.js"></script>
+<script type="text/javascript">
+$(document).ready(function(){ 
+  $('.article-content').each(function(i){
+    $(this).find('img').each(function(){
+      if ($(this).parent().hasClass('fancybox')) return;
+      var alt = this.alt;
+      if (alt) $(this).after('<span class="caption">' + alt + '</span>');
+      $(this).wrap('<a href="' + this.src + '" title="' + alt + '" class="fancybox"></a>');
+    });
+    $(this).find('.fancybox').each(function(){
+      $(this).attr('rel', 'article' + i);
+    });
+  });
+  if($.fancybox){
+    $('.fancybox').fancybox();
+  }
+}); 
+</script>
+
+
+
+<!-- Analytics Begin -->
+
+
+
+<script>
+var _hmt = _hmt || [];
+(function() {
+  var hm = document.createElement("script");
+  hm.src = "//hm.baidu.com/hm.js?e6d1f421bbc9962127a50488f9ed37d1";
+  var s = document.getElementsByTagName("script")[0]; 
+  s.parentNode.insertBefore(hm, s);
+})();
+</script>
+
+
+
+<!-- Analytics End -->
+
+<!-- Totop Begin -->
+
+	<div id="totop">
+	<a title="返回顶部"><img src="/img/scrollup.png"/></a>
+	</div>
+	<script src="/js/totop.js"></script>
+
+<!-- Totop End -->
+
+<!-- MathJax Begin -->
+<!-- mathjax config similar to math.stackexchange -->
+
+
+<!-- MathJax End -->
+
+<!-- Tiny_search Begin -->
+
+<!-- Tiny_search End -->
+
+  </body>
+</html>
