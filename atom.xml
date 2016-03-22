@@ -44,7 +44,7 @@
     <link href="zecis.me/2016/02/22/eventkit/"/>
     <id>zecis.me/2016/02/22/eventkit/</id>
     <published>2016-02-22T15:17:51.000Z</published>
-    <updated>2016-03-22T14:35:15.000Z</updated>
+    <updated>2016-03-22T14:36:51.000Z</updated>
     
     <content type="html">&lt;p&gt;最近在公司的项目开发过程中遇到一个需求：获取系统日历内的事件，通过 ANCS 协议通知可穿戴设备，所以就找了官方的Demo看了一下。&lt;br&gt;&lt;!-- 在 iOS 4.0 就提供了`EventKit.framework`给开发者获取日历相关数据。--&gt;&lt;/p&gt;
 &lt;p&gt;首先，日历中所以的事件都是通过&lt;code&gt;EKEventStore&lt;/code&gt;这个类来管理的，所有单独的事件都是一个个&lt;code&gt;EKEvent&lt;/code&gt;对象，结合下面的数据和日历事件详情截图可获取对应的数据&lt;/p&gt;
@@ -87,8 +87,6 @@
     
       <category term="EventKit" scheme="zecis.me/tags/EventKit/"/>
     
-      <category term="iOS" scheme="zecis.me/tags/iOS/"/>
-    
   </entry>
   
   <entry>
@@ -96,7 +94,7 @@
     <link href="zecis.me/2015/12/08/jump-to-preferences/"/>
     <id>zecis.me/2015/12/08/jump-to-preferences/</id>
     <published>2015-12-08T12:35:40.000Z</published>
-    <updated>2016-03-22T14:34:58.000Z</updated>
+    <updated>2016-03-22T14:36:56.000Z</updated>
     
     <content type="html">&lt;p&gt;跳转到app的系统设置界面&lt;/p&gt;
 &lt;figure class=&quot;highlight objc&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;prefs:root=&lt;span class=&quot;string&quot;&gt;&quot;Bundle identifier&quot;&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;</content>
@@ -108,8 +106,6 @@
     
     </summary>
     
-    
-      <category term="iOS" scheme="zecis.me/tags/iOS/"/>
     
   </entry>
   
@@ -237,7 +233,7 @@
     <link href="zecis.me/2015/06/14/mac-apps/"/>
     <id>zecis.me/2015/06/14/mac-apps/</id>
     <published>2015-06-14T09:16:51.000Z</published>
-    <updated>2016-03-22T14:35:05.000Z</updated>
+    <updated>2016-03-22T14:37:06.000Z</updated>
     
     <content type="html">&lt;h4 id=&quot;开发篇&quot;&gt;&lt;a href=&quot;#开发篇&quot; class=&quot;headerlink&quot; title=&quot;开发篇&quot;&gt;&lt;/a&gt;开发篇&lt;/h4&gt;&lt;ul&gt;
 &lt;li&gt;&lt;strong&gt;Alfred&lt;/strong&gt;：说它是 Mac 下第一神器估计没什么人反对吧，我觉得任何解释对于它都是多余的，谁用谁知道。（£ 17 / License）&lt;/li&gt;
@@ -278,7 +274,7 @@
     </summary>
     
     
-      <category term="Mac" scheme="zecis.me/tags/Mac/"/>
+      <category term="Mac App" scheme="zecis.me/tags/Mac-App/"/>
     
   </entry>
   
