@@ -82,6 +82,67 @@
         <header class="article-info clearfix">
   <h1 itemprop="name">
     
+      <a href="/2016/04/05/runtime-usage/" title="Runtime 常用小结（持续更新）" itemprop="url">Runtime 常用小结（持续更新）</a>
+  </h1>
+  <p class="article-author">By
+       
+		<a href="/about" title="Zec" target="_blank" itemprop="author">Zec</a>
+		
+  <p class="article-time">
+    <time datetime="2016-04-05T14:15:07.000Z" itemprop="datePublished"> 发表于 2016-04-05</time>
+    
+  </p>
+</header>
+    <div class="article-content">
+        
+        <h3 id="dealloc"><a href="#dealloc" class="headerlink" title="dealloc"></a>dealloc</h3><p>我们经常会在开发过程中遇到这样的问题：检测某个 <code>ViewController</code> 是否在 pop 后被释放。通常情况下，我们可以通过将项目中所有的 <code>ViewController</code> 继承自某个自定义的类，然后在该类中重写 <code>dealloc</code> 方法。另一种是更笨的办法：手动在我们需要检测的类中手动重写 <code>dealloc</code> 方法。</p>
+<p>其实这两种方法都各有优劣，具体我就不想再分析了。实际上，除了上述两种办法，还有一种更好的办法来解决这样一个需求，就是我们标题所说到 <code>Objective-C</code> 中的 <code>Runtime</code> 。</p>
+<p>Runtime 顾名思义就是运行时，由于 <code>Objective-C</code> 是一门动态语言，很多事情都不是放在编译而是运行时做的。具体的理论我就不再赘述，总之在这个需求中，<code>Runtime</code> 的特性能很好的满足我们的需求。</p>
+<p>首先 创建一个 <code>UIViewController</code> 的 <code>Category</code>，在 <code>Category</code> 中重写 <code>load</code>方法，详细代码如下</p>
+<figure class="highlight objc"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br></pre></td><td class="code"><pre><span class="line">+ (<span class="keyword">void</span>)load &#123;</span><br><span class="line">    [<span class="keyword">super</span> load];</span><br><span class="line">    </span><br><span class="line">    <span class="comment">//	由于 ARC 中不允许手动调用 dealloc 方法，所以 originSEL 使用 NSSelectorFromString()来获取</span></span><br><span class="line">    SEL originSEL  = <span class="built_in">NSSelectorFromString</span>(<span class="string">@"dealloc"</span>);</span><br><span class="line">    SEL swapSEL = <span class="keyword">@selector</span>(zecDealloc);</span><br><span class="line">    </span><br><span class="line">    Method originMethod = class_getInstanceMethod(<span class="keyword">self</span>, originSEL);</span><br><span class="line">    Method swapMethod = class_getInstanceMethod(<span class="keyword">self</span>, swapSEL);</span><br><span class="line">    </span><br><span class="line">    IMP originIMP = method_getImplementation(originMethod);</span><br><span class="line">    IMP swapIMP = method_getImplementation(swapMethod);</span><br><span class="line">    </span><br><span class="line">    <span class="built_in">BOOL</span> didAddMethod = class_addMethod(<span class="keyword">self</span>, originSEL, swapIMP, method_getTypeEncoding(originMethod));</span><br><span class="line">    </span><br><span class="line">    <span class="keyword">if</span>(didAddMethod) &#123;</span><br><span class="line">        class_replaceMethod(<span class="keyword">self</span>, swapSEL, originIMP, method_getTypeEncoding(originMethod));</span><br><span class="line">    &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">        method_exchangeImplementations(originMethod, swapMethod);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">- (<span class="keyword">void</span>)zecDealloc &#123;</span><br><span class="line">    <span class="built_in">NSLog</span>(<span class="string">@"Dealloc ---- %@"</span>,[<span class="keyword">self</span> class]);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>这段代码的功能就是将系统的 <code>dealloc</code> 方法用重写的 <code>zecDealloc</code> 方法替代，而实现替换的主要功臣是 <code>class_replaceMethod()</code> 和 <code>method_exchangeImplementations()</code> 两个 <code>Runtime</code> 方法，根据方法名，这两个方法的具体作用也很好理解。</p>
+<p>Runtime 是 Objective-C 的一把双刃剑，我自己也会在以后的实际项目中慢慢学习和总结。</p>
+
+        
+        
+        <p class="article-more-link">
+          
+       </p>
+    </div>
+    <footer class="article-footer clearfix">
+<div class="article-catetags">
+
+
+  <div class="article-tags">
+  
+  <span></span> <a href="/tags/Runtime/">Runtime</a><a href="/tags/iOS/">iOS</a>
+  </div>
+
+</div>
+
+
+
+
+<div class="comments-count">
+	
+</div>
+
+</footer>
+
+
+    </article>
+
+
+
+
+
+
+   
+    
+    <article class="post-expand post" itemprop="articleBody"> 
+        <header class="article-info clearfix">
+  <h1 itemprop="name">
+    
       <a href="/2016/02/22/eventkit/" title="EventKit简介" itemprop="url">EventKit简介</a>
   </h1>
   <p class="article-author">By
@@ -427,7 +488,11 @@
 		<ul class="clearfix">
 		
 			
-				<li><a href="/tags/iOS/" title="iOS">iOS<sup>2</sup></a></li>
+				<li><a href="/tags/iOS/" title="iOS">iOS<sup>3</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/Runtime/" title="Runtime">Runtime<sup>1</sup></a></li>
 			
 		
 			
