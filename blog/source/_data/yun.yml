@@ -125,7 +125,7 @@ avatar:
   rounded: true
   # The value of opacity should be choose from 0 to 1 to set the opacity of the avatar.
   opacity: 1
-  mickey_mouse: false
+  mickey_mouse: true
 
 # main menu navigation
 menu:
