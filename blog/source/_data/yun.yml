@@ -138,13 +138,9 @@ menu:
   tags:
     path: /tags
     icon: icon-price-tag-3-line
-  categories:
-    path: /categories
-    icon: icon-folder-2-line
-  # custom:
-  #   title: 文档
-  #   path: https://yun.yunyoujun.cn
-  #   icon: icon-settings-line
+  custom:
+    path: /about
+    icon: icon-user-line
 
 # archive
 archive:
@@ -372,7 +368,7 @@ reward_settings:
   # You can show or hide reward in a specific page throuth `reward: true | false` in Front Matter.
   enable: true
   icon: icon-hand-coin-line
-  comment: I'm so cute. Please give me money.
+  comment: I'm so cute. Please donate to me.
   # url: https://github.com/YunYouJun/yunyoujun.github.io/issues/96
 
 reward:

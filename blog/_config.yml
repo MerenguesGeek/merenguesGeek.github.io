@@ -3,17 +3,17 @@
 ## Source: https://github.com/hexojs/hexo/
 
 # Site
-title: ''
+title: 'Zec的小站'
 subtitle: ''
-description: ''
+description: 'Today is the second best time to learn something, yesterday is the best.'
 keywords:
 author: Zec
-language: lang-CN
+language: zh-CN
 timezone: ''
 
 # URL
 ## If your site is put in a subdirectory, set url as 'http://yoursite.com/child' and root as '/child/'
-url: http://zecis.me
+url: https://zecis.me
 root: /
 permalink: :year/:month/:day/:title/
 permalink_defaults:
