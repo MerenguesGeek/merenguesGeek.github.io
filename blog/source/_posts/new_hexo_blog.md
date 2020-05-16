@@ -3,7 +3,8 @@ title: 新的hexo博客写起来
 date: 2020-05-15 12:27:29
 tags: [Product manager,Programmer,Deep continuous learning]
 categories: 人生感悟
-katex: ture
+katex: true
+top: 2
 ---
 之前的博客最后一次更新已经是四年之前，并且大部分都是iOS开相关的技术成长记录。经过这四年的职业成长，我现在已经不再写iOS代码。其次，现在的主职工作还是产品规划以及研发项目管理。最后也是最重要的是我觉得单纯的App开发已经没有挑战性，下一次工业革命的推动力一定有人工智能的功劳，所以我现在正希望也在正付诸行动中的是去做一些我热爱的并且能成为未来改变这个世界的某一个可能性。
 
