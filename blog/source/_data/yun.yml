@@ -61,7 +61,7 @@ social:
   #   icon: icon-douban-line
   #   color: "#007722"
   - name: 网易云音乐
-    link: https://music.163.com/#/user/home?id=30409754
+    link: https://music.163.com/#/user/home?id=94462862
     icon: icon-netease-cloud-music-line
     color: "#C20C0C"
   # - name: 知乎
@@ -81,7 +81,7 @@ social:
   #   icon: icon-wechat-2-line
   #   color: "#1AAD19"
   - name: Twitter
-    link: https://twitter.com/Toughlife2020
+    link: https://twitter.com/Merengues_Geek
     icon: icon-twitter-line
     color: "#1da1f2"
   - name: Telegram
@@ -110,12 +110,12 @@ pages:
 anonymous_image: https://cdn.jsdelivr.net/gh/YunYouJun/cdn/img/avatar/none.jpg
 
 albums:
-  enable: true
+  enable: false
   icon: icon-gallery-line
   src: /js/gallery-decrypt.js
 
 girls:
-  enable: true
+  enable: false
 
 # Sidebar Avatar
 avatar:
@@ -154,6 +154,7 @@ tag_cloud:
 
 wordcloud:
   enable: true
+  height: 350
 
 # You can set color for every tag or category.
 tags:
