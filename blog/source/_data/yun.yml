@@ -54,9 +54,9 @@ social:
     icon: icon-mail-line
     color: "#8E71C1"
 
-  - name: Gitee
-    link: https://gitee.com/Merengues_Geek
-    icon: /gitee.svg
+  # - name: Gitee
+  #   link: https://gitee.com/Merengues_Geek
+  #   icon: /gitee.svg
 
   # - name: 微博
   #   link: https://weibo.com/jizhideyunyoujun
