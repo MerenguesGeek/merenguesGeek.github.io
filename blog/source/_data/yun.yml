@@ -48,16 +48,10 @@ social:
     link: https://github.com/MerenguesGeek
     icon: icon-github-line
     color: "#181717"
-
   - name: E-Mail
     link: mailto:zky013152yi@gmail.com
     icon: icon-mail-line
     color: "#8E71C1"
-
-  - name: Gitee
-    link: https://gitee.com/Merengues_Geek
-    icon: /gitee.svg
-
   # - name: 微博
   #   link: https://weibo.com/jizhideyunyoujun
   #   icon: icon-weibo-line
@@ -421,8 +415,6 @@ post_edit:
 # Footer Settings
 # ---------------
 footer:
-
-
   since: 2019
 
   # Icon between year and copyright info.
@@ -445,10 +437,10 @@ footer:
     # icp: 苏ICP备xxxxxxxx号
 
   live_time:
-    enable: true
+    enable: false
     prefix: 本博客已萌萌哒地运行
     suffix: (●'◡'●)
-    start_time: "2019-02-16T00:00:00"
+    start_time: "2019-04-12T00:00:00"
 
   # Any custom text can be defined here.
   # custom_text: Hosted by <a href="https://pages.coding.me" rel="noopener" target="_blank">Coding Pages</a>
