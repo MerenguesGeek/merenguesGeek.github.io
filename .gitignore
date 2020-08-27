@@ -39,6 +39,7 @@ build/Release
 
 # Dependency directories
 node_modules/
+blog/node/modules/
 blog/themes/yun/
 jspm_packages/
 
