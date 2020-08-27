@@ -548,13 +548,15 @@ minivaline:
 # Show Views / Visitors of the website / page with busuanzi.
 # Get more information on http://ibruce.info/2015/04/04/busuanzi
 busuanzi:
-  enable: false
+  enable: true
   site_uv: true
   site_uv_icon: icon-user-line
   site_pv: true
   site_pv_icon: icon-eye-line
-  page_pv: true
-  page_pv_icon: icon-eye-line
+  # page_pv: true
+  # page_pv_icon: icon-eye-line
+  page_uv: true
+  page_uv_icon: icon-user-line
 
 # Post wordcount display settings
 # Dependencies: https://github.com/theme-next/hexo-symbols-count-time
