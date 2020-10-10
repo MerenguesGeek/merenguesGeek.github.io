@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title></title>
+  
+  
+  <link href="/atom.xml" rel="self"/>
+  
+  <link href="https://zecis.me/"/>
+  <updated>2020-10-10T09:21:26.053Z</updated>
+  <id>https://zecis.me/</id>
+  
+  <author>
+    <name>Merengues0x2A</name>
+    
+  </author>
+  
+  <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>disgust_me</title>
+    <link href="https://zecis.me/2020/10/10/disgust-me/"/>
+    <id>https://zecis.me/2020/10/10/disgust-me/</id>
+    <published>2020-10-10T09:21:26.000Z</published>
+    <updated>2020-10-10T09:21:26.053Z</updated>
+    
+    <summary type="html">
+    
+    </summary>
+    
+    
+    
+  </entry>
+  
+</feed>
