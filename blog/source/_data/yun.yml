@@ -1,6 +1,6 @@
 # ---------------
 # Todo: mode: light | dark | auto
-mode: light # now only light
+mode: time # now only light
 
 # Theme color for customize
 # Notice: color value must in double quotes: "#000000"
@@ -52,10 +52,10 @@ social:
     link: mailto:zky013152yi@gmail.com
     icon: icon-mail-line
     color: "#8E71C1"
-  # - name: 微博
-  #   link: https://weibo.com/jizhideyunyoujun
-  #   icon: icon-weibo-line
-  #   color: "#E6162D"
+  - name: 微博
+    link: https://weibo.com/u/7504664437
+    icon: icon-weibo-line
+    color: "#E6162D"
   # - name: 豆瓣
   #   link: https://www.douban.com/people/yunyoujun/
   #   icon: icon-douban-line
@@ -64,10 +64,10 @@ social:
     link: http://music.163.com/m/user/home?id=3419123822
     icon: icon-netease-cloud-music-line
     color: "#C20C0C"
-  # - name: 知乎
-  #   link: https://www.zhihu.com/people/Merengues_Geek
-  #   icon: icon-zhihu-line
-  #   color: "#0084FF"
+  - name: 知乎
+    link: https://www.zhihu.com/people/Merengues_Geek
+    icon: icon-zhihu-line
+    color: "#0084FF"
   # - name: 哔哩哔哩
   #   link: https://space.bilibili.com/1579790
   #   icon: icon-bilibili-line
@@ -110,12 +110,12 @@ pages:
 anonymous_image: https://cdn.jsdelivr.net/gh/YunYouJun/cdn/img/avatar/none.jpg
 
 albums:
-  enable: false
+  enable: true
   icon: icon-gallery-line
   src: /js/gallery-decrypt.js
 
 girls:
-  enable: false
+  enable: true
 
 # Sidebar Avatar
 avatar:
@@ -154,7 +154,7 @@ tag_cloud:
 
 wordcloud:
   enable: true
-  height: 350
+  height: 300
 
 # You can set color for every tag or category.
 tags:
@@ -235,7 +235,7 @@ lazyload:
 
 # pjax
 pjax:
-  enable: false
+  enable: true
   src: /js/pjax.js
 
 # stylesheets loaded in the <head>
@@ -464,7 +464,7 @@ notice:
 # say something
 # https://say.elpsy.cn
 say:
-  enable: true
+  enable: false
   # api: https://say.elpsy.cn/sentences.json
   # /data/sentences.json
   api: https://cdn.jsdelivr.net/gh/ElpsyCN/say@gh-pages/sentences.json
@@ -485,15 +485,15 @@ say:
 # -------
 comment:
   enable: true
-  tips:
-    - 若您无 GitHub 账号，可直接在下方匿名评论。
-    - 若您想及时得到回复提醒，建议跳转 GitHub Issues 评论。
-    - 若没有本文 Issue，您可以使用 Comment 模版新建。
+  # tips:
+  #   - 若您无 GitHub 账号，可直接在下方匿名评论。
+  #   - 若您想及时得到回复提醒，建议跳转 GitHub Issues 评论。
+  #   - 若没有本文 Issue，您可以使用 Comment 模版新建。
 
 # GitHub Issues Link Button
 # https://help.github.com/en/github/searching-for-information-on-github/searching-issues-and-pull-requests
 github_issues:
-  enable: true
+  enable: false
   username: MerenguesGeek
   repository: MerenguesGeek.github.io
   filters: is:issue
@@ -503,20 +503,20 @@ github_issues:
 # More info available at https://valine.js.org
 # extend: https://github.com/DesertsP/Valine-Admin
 valine:
-  enable: false
-  appId: # your leancloud application appid
-  appKey: # your leancloud application appkey
-  placeholder: Just go go # comment box placeholder
-  avatar: # gravatar style
+  enable: true
+  appId: otTDY9D15A0uQg1WDQezkYwO-gzGzoHsz
+  appKey: nQDjvihJjHeVYP9oEuxkBcoU
+  placeholder: Leave ur message plz! # comment box placeholder
+  # avatar: # gravatar style
   # meta:
   #   - nick
   #   - mail
   #   - link
   pageSize: 10 # pagination size
   # lang: zh-CN
-  visitor: false
+  visitor: true
   highlight: true
-  recordIP: false
+  recordIP: true
   # serverURLs:
   # Emoji See: https://valine.js.org/emoji.html
   # emojiCDN: //i0.hdslb.com/bfs/emote/
@@ -548,7 +548,7 @@ minivaline:
 # Show Views / Visitors of the website / page with busuanzi.
 # Get more information on http://ibruce.info/2015/04/04/busuanzi
 busuanzi:
-  enable: true
+  enable: false
   site_uv: true
   site_uv_icon: icon-user-line
   site_pv: true
@@ -615,12 +615,12 @@ aplayer:
   meting: true
   # https://github.com/metowolf/MetingJS/tree/v1.2#option
   widget:
-    enable: false
+    enable: true
     option:
-      id: 308168565
+      id: 5284192292
       server: netease
       type: playlist
-      autoplay: false
+      autoplay: true
       # theme: "#2980b9"
       loop: all
       order: list
