@@ -472,7 +472,7 @@ say:
   src: /js/say.js
   # https://developer.hitokoto.cn/sentence/
   hitokoto:
-    enable: true
+    enable: false
     api: https://v1.hitokoto.cn
     # api: https://v1.hitokoto.cn?c=a&c=b&c=c&c=d&c=k
 
@@ -616,21 +616,26 @@ aplayer:
   # https://github.com/metowolf/MetingJS/tree/v1.2#option
   widget:
     enable: true
-    option:
-      id: 5284192292
-      server: netease
-      type: playlist
-      autoplay: true
-      # theme: "#2980b9"
-      loop: all
-      order: list
-      preload: auto
-      volume: 0.7
-      mutex: true
-      lrctype: 0
-      listfolded: false
-      listmaxheight: 340px
-      storagename: metingjs
+    autoplay: true
+    # theme: "#2980b9"
+    loop: all
+    order: list
+    preload: auto
+    volume: 0.7
+    mutex: true
+    lrcType: 0
+    listFolded: false
+    listMaxHeight: 340px
+    # audio:
+    #   - name: 星宿计时
+    #     artist: 杉田朗/洛天依
+    #     url: https://cdn.jsdelivr.net/gh/YunYouJun/cdn/audio/star-timer.mp3
+    #     cover: https://cdn.jsdelivr.net/gh/YunYouJun/cdn/img/bg/stars-timing-0.jpg
+    meting:
+      enable: true
+      id: 0016OeLm0GTDR7
+      server: tencent
+      type: song
 
 # special
 mourn:
