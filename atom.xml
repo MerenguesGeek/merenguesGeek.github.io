@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://deepaxon.com/"/>
-  <updated>2020-11-09T02:12:01.522Z</updated>
+  <updated>2020-11-10T20:23:39.993Z</updated>
   <id>https://deepaxon.com/</id>
   
   <author>
@@ -15,6 +15,32 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Restart</title>
+    <link href="https://deepaxon.com/2020/11/11/restart/"/>
+    <id>https://deepaxon.com/2020/11/11/restart/</id>
+    <published>2020-11-10T19:26:56.000Z</published>
+    <updated>2020-11-10T20:23:39.993Z</updated>
+    
+    <content type="html"><![CDATA[<p>终于可以重新开始一段生活，三年来一直活在对未来不确定的恐惧中，这种恐惧让我犹如惊弓之鸟。</p><p>首先是自己拿到了一些可以选择的机会，也有足够的时间去思考和做准备。</p><p>其次是很庆幸可以遇到一个温柔的人，可以互相坦诚地交流一切。在睡不着的晚上可以被她的声音治愈。她可以陪我云喝酒，给我唱歌，关心我的所有。我们聊彼此的专业，聊经济学，聊社会学，聊政治，聊哲学，聊大选，任何话题都好像是共同话题。</p><p>也很庆幸我有一帮温暖的大学室友，可以规划一次毕业十年的团聚旅行，很期待春节的海南环岛自驾游。</p><p>我想我是看够了日落，这次让我看看日出吧。</p>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;p&gt;终于可以重新开始一段生活，三年来一直活在对未来不确定的恐惧中，这种恐惧让我犹如惊弓之鸟。&lt;/p&gt;
+&lt;p&gt;首先是自己拿到了一些可以选择的机会，也有足够的时间去思考和做准备。&lt;/p&gt;
+&lt;p&gt;其次是很庆幸可以遇到一个温柔的人，可以互相坦诚地交流一切。在睡不着的晚上可以被她的声音治
+      
+    
+    </summary>
+    
+    
+    
+      <category term="Restart" scheme="https://deepaxon.com/tags/Restart/"/>
+    
+  </entry>
   
   <entry>
     <title>To Cecelia</title>
@@ -36,29 +62,6 @@
       <category term="Life Story" scheme="https://deepaxon.com/tags/Life-Story/"/>
     
       <category term="Emotion" scheme="https://deepaxon.com/tags/Emotion/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>New life</title>
-    <link href="https://deepaxon.com/2020/10/28/about-the-new-job-and-life/"/>
-    <id>https://deepaxon.com/2020/10/28/about-the-new-job-and-life/</id>
-    <published>2020-10-28T01:31:20.000Z</published>
-    <updated>2020-11-09T02:11:37.097Z</updated>
-    
-    <content type="html"><![CDATA[<div id="hexo-blog-encrypt" data-wpm="Oh, this is an invalid password. Check and try again, please." data-whm="OOPS, these decrypted content may changed, but you can still have a look.">  <div class="hbe-input-container">  <input type="password" id="hbePass" placeholder="" />    <label for="hbePass">Hey, password is required here.</label>    <div class="bottom-line"></div>  </div>  <script id="hbeData" type="hbeData" data-hmacdigest="360facd99dadcc004696a20b31113186f2131cd3a917b6e53a8d3ac8e3359667">4742cb3d0459568f331d6c158270d90d</script></div><script src="/lib/blog-encrypt.js"></script><link href="/css/blog-encrypt.css" rel="stylesheet" type="text/css">]]></content>
-    
-    <summary type="html">
-    
-      Here&#39;s something encrypted, password is required to continue reading.
-    
-    </summary>
-    
-    
-    
-      <category term="Life" scheme="https://deepaxon.com/tags/Life/"/>
-    
-      <category term="Job" scheme="https://deepaxon.com/tags/Job/"/>
     
   </entry>
   
