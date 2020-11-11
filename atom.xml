@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://deepaxon.com/"/>
-  <updated>2020-11-10T21:10:24.846Z</updated>
+  <updated>2020-11-11T09:39:57.882Z</updated>
   <id>https://deepaxon.com/</id>
   
   <author>
@@ -15,6 +15,27 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Organ donation</title>
+    <link href="https://deepaxon.com/2020/11/11/Organ-donation/"/>
+    <id>https://deepaxon.com/2020/11/11/Organ-donation/</id>
+    <published>2020-11-11T02:25:26.000Z</published>
+    <updated>2020-11-11T09:39:57.882Z</updated>
+    
+    <content type="html"><![CDATA[<div id="hexo-blog-encrypt" data-wpm="Oh, this is an invalid password. Check and try again, please." data-whm="OOPS, these decrypted content may changed, but you can still have a look.">  <div class="hbe-input-container">  <input type="password" id="hbePass" placeholder="" />    <label for="hbePass">Hey, password is required here.</label>    <div class="bottom-line"></div>  </div>  <script id="hbeData" type="hbeData" data-hmacdigest="1b78ed9afad8f63203a1cca2cd1015682a99023eb588ce24e25c98544299b678">ac4015375466d70d0074180ff1c5a46b4d3416a0156871003c64afe10f087d593f44c1a9ade5cb1272e7e024b48ce452</script></div><script src="/lib/blog-encrypt.js"></script><link href="/css/blog-encrypt.css" rel="stylesheet" type="text/css">]]></content>
+    
+    <summary type="html">
+    
+      Here&#39;s something encrypted, password is required to continue reading.
+    
+    </summary>
+    
+    
+    
+      <category term="Organ donation" scheme="https://deepaxon.com/tags/Organ-donation/"/>
+    
+  </entry>
   
   <entry>
     <title>2020年末的一些转机</title>
