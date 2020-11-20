@@ -61,13 +61,17 @@ social:
   #   icon: icon-douban-line
   #   color: "#007722"
   # - name: 网易云音乐
-  #   link: http://music.163.com/m/user/home?id=3419123822
+  #   link: https://y.qq.com/portal/profile.html?uin=ow4F7e6kNe-P
   #   icon: icon-netease-cloud-music-line
   #   color: "#C20C0C"
-  # - name: 知乎
-  #   link: https://www.zhihu.com/people/Merengues_Geek
-  #   icon: icon-zhihu-line
-  #   color: "#0084FF"
+  - name: Instagram
+    link: https://www.instagram.com/merengues0x2a/
+    icon: icon-Instagram
+    color: "#C20C0C"
+  - name: 知乎
+    link: https://www.zhihu.com/people/powerball0x2a
+    icon: icon-zhihu-line
+    color: "#0084FF"
   # - name: 哔哩哔哩
   #   link: https://space.bilibili.com/1579790
   #   icon: icon-bilibili-line
@@ -80,10 +84,10 @@ social:
   #   link: https://cdn.jsdelivr.net/gh/YunYouJun/cdn/img/about/white-qrcode-and-search.jpg
   #   icon: icon-wechat-2-line
   #   color: "#1AAD19"
-  # - name: Twitter
-  #   link: https://twitter.com/Merengues_Geek
-  #   icon: icon-twitter-line
-  #   color: "#1da1f2"
+  - name: Twitter
+    link: https://twitter.com/Powerball0x2A
+    icon: icon-twitter-line
+    color: "#1da1f2"
   # - name: Telegram
   #   link: https://t.me/Semi_z
   #   icon: icon-telegram-line
@@ -120,7 +124,7 @@ girls:
 # Sidebar Avatar
 avatar:
   enable: true
-  url: https://tva1.sinaimg.cn/large/007S8ZIlgy1gexqyp4lvxj30k10k076g.jpg
+  url: https://tva1.sinaimg.cn/large/0081Kckwly1gkw1mktgixj30u00u0tam.jpg
   # If true, the avatar would be dispalyed in circle.
   rounded: true
   # The value of opacity should be choose from 0 to 1 to set the opacity of the avatar.
@@ -149,12 +153,12 @@ archive:
 # https://github.com/MikeCoder/hexo-tag-cloud
 tag_cloud:
   enable: true
-  width: 300
-  height: 300
+  width: 200
+  height: 200
 
 wordcloud:
   enable: true
-  height: 300
+  # height: 300
 
 # You can set color for every tag or category.
 tags:
@@ -252,6 +256,7 @@ head:
   js:
     base:
     async:
+      iconfont: //at.alicdn.com/t/font_2218972_en33mmocn6m.js
     defer:
 
 # cdn for third-party library (always include)
@@ -305,7 +310,7 @@ vendors:
 # UI
 banner:
   enable: true
-  title: 42的小站
+  title: Zec的终极答案
   src: /js/ui/banner.js
   cloud: true
   go_down:
@@ -633,7 +638,7 @@ aplayer:
     #     cover: https://cdn.jsdelivr.net/gh/YunYouJun/cdn/img/bg/stars-timing-0.jpg
     meting:
       enable: true
-      id: 0016OeLm0GTDR7
+      id: 000eXYqR2wEf9M
       server: tencent
       type: song
 
