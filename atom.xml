@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://zecis.me/"/>
-  <updated>2020-11-20T15:56:34.379Z</updated>
+  <updated>2020-11-22T19:17:01.375Z</updated>
   <id>https://zecis.me/</id>
   
   <author>
@@ -15,6 +15,32 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>How to use Tensorflow to build a fashion-mnist model</title>
+    <link href="https://zecis.me/2020/11/23/How-to-use-Tensorflow-to-build-a-fashion-mnist-model/"/>
+    <id>https://zecis.me/2020/11/23/How-to-use-Tensorflow-to-build-a-fashion-mnist-model/</id>
+    <published>2020-11-22T19:07:16.000Z</published>
+    <updated>2020-11-22T19:17:01.375Z</updated>
+    
+    <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="/assets/css/APlayer.min.css"><script src="/assets/js/APlayer.min.js" class="aplayer-secondary-script-marker"></script><p><img src="https://tva1.sinaimg.cn/large/0081Kckwly1gkyjs6vr26j31c00u0qv9.jpg" loading="lazy"></p><p><img src="https://tva1.sinaimg.cn/large/0081Kckwly1gkyjsgbk1pj31c00u0u10.jpg" loading="lazy"></p><p><img src="https://tva1.sinaimg.cn/large/0081Kckwly1gkyjsix06lj31c00u0npg.jpg" loading="lazy"></p><p><img src="https://tva1.sinaimg.cn/large/0081Kckwly1gkyjsxzojij31c00u04qr.jpg" loading="lazy"></p><p><img src="https://tva1.sinaimg.cn/large/0081Kckwly1gkyjthjdzjj31c00u0b2b.jpg" loading="lazy"></p><p><img src="https://tva1.sinaimg.cn/large/0081Kckwly1gkyjtqpzerj31c00u0e83.jpg" loading="lazy"></p><p><img src="https://tva1.sinaimg.cn/large/0081Kckwly1gkyjtx4w4lj31c00u0b2b.jpg" loading="lazy"></p><p>!(Code sample in Colab)[<a href="https://colab.research.google.com/drive/1FRRYJLpFg-4Y8RjDUuSc7kDktHmOIW0P#scrollTo=ZyTc8IWF1xfZ]" target="_blank" rel="noopener">https://colab.research.google.com/drive/1FRRYJLpFg-4Y8RjDUuSc7kDktHmOIW0P#scrollTo=ZyTc8IWF1xfZ]</a></p>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;link rel=&quot;stylesheet&quot; class=&quot;aplayer-secondary-style-marker&quot; href=&quot;/assets/css/APlayer.min.css&quot;&gt;&lt;script src=&quot;/assets/js/APlayer.min.js&quot; cla
+      
+    
+    </summary>
+    
+    
+    
+      <category term="TensorFlow" scheme="https://zecis.me/tags/TensorFlow/"/>
+    
+      <category term="Convolutional Neural Network" scheme="https://zecis.me/tags/Convolutional-Neural-Network/"/>
+    
+  </entry>
   
   <entry>
     <title>《上瘾：让用户养成使用习惯的四大产品逻辑》读书笔记</title>
