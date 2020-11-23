@@ -64,14 +64,14 @@ social:
   #   link: https://y.qq.com/portal/profile.html?uin=ow4F7e6kNe-P
   #   icon: icon-netease-cloud-music-line
   #   color: "#C20C0C"
-  - name: Instagram
-    link: https://www.instagram.com/merengues0x2a/
-    icon: icon-Instagram
-    color: "#C20C0C"
-  - name: 知乎
-    link: https://www.zhihu.com/people/powerball0x2a
-    icon: icon-zhihu-line
-    color: "#0084FF"
+  # - name: Instagram
+  #   link: https://www.instagram.com/merengues0x2a/
+  #   icon: icon-Instagram
+  #   color: "#C20C0C"
+  # - name: 知乎
+  #   link: https://www.zhihu.com/people/powerball0x2a
+  #   icon: icon-zhihu-line
+  #   color: "#0084FF"
   # - name: 哔哩哔哩
   #   link: https://space.bilibili.com/1579790
   #   icon: icon-bilibili-line
@@ -84,10 +84,10 @@ social:
   #   link: https://cdn.jsdelivr.net/gh/YunYouJun/cdn/img/about/white-qrcode-and-search.jpg
   #   icon: icon-wechat-2-line
   #   color: "#1AAD19"
-  - name: Twitter
-    link: https://twitter.com/Powerball0x2A
-    icon: icon-twitter-line
-    color: "#1da1f2"
+  # - name: Twitter
+  #   link: https://twitter.com/Powerball0x2A
+  #   icon: icon-twitter-line
+  #   color: "#1da1f2"
   # - name: Telegram
   #   link: https://t.me/Semi_z
   #   icon: icon-telegram-line
@@ -511,7 +511,7 @@ valine:
   enable: true
   appId: otTDY9D15A0uQg1WDQezkYwO-gzGzoHsz
   appKey: nQDjvihJjHeVYP9oEuxkBcoU
-  placeholder: Leave ur message plz! # comment box placeholder
+  placeholder: Leave ur God damn message plz! # comment box placeholder
   # avatar: # gravatar style
   # meta:
   #   - nick

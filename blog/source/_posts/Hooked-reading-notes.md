@@ -2,6 +2,7 @@
 title: 《上瘾：让用户养成使用习惯的四大产品逻辑》读书笔记
 date: 2020-11-20 23:55:27
 tags: [Reading notes,Hooked]
+reward: true
 
 ---
 
